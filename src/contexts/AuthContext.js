@@ -12,7 +12,6 @@ export const AuthProvider = ({ children }) => {
 
 	useEffect(() => {
 		auth.onAuthStateChanged((user) => {
-			console.log(user);
 			setUser(user);
 			setLoading(false);
 			if (user) history.push("/chats");
